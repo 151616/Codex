@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Hole Simulation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="controls">
+        <h1>Black Hole Simulation</h1>
+        <p>
+          Newtonian gravity with relativistic-inspired corrections for disk precession and
+          visual lensing.
+        </p>
+
+        <label>
+          Black hole mass
+          <input id="mass" type="range" min="4000" max="50000" value="18000" step="250" />
+          <span id="massValue"></span>
+        </label>
+
+        <label>
+          Gravity scale
+          <input id="gravityScale" type="range" min="0.3" max="2.2" value="1" step="0.05" />
+          <span id="gravityScaleValue"></span>
+        </label>
+
+        <label>
+          Particle count
+          <input id="particleCount" type="range" min="500" max="3000" value="1400" step="50" />
+          <span id="particleCountValue"></span>
+        </label>
+
+        <label>
+          Lensing strength
+          <input id="lensing" type="range" min="0" max="2.5" value="1.1" step="0.05" />
+          <span id="lensingValue"></span>
+        </label>
+
+        <button id="reset">Reset Disk</button>
+
+        <ul>
+          <li>Mouse wheel: zoom</li>
+          <li>Drag: pan camera</li>
+          <li>Simulation target: 500+ particles real-time</li>
+        </ul>
+      </aside>
+
+      <main class="viewport">
+        <canvas id="simCanvas"></canvas>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
